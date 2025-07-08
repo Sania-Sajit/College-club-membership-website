@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title>List of Clubs</title>
-   </head>
-  <body>
-    <h1> XYZ College</h1>
-    <h1> Clubs and Societies</h1>
-    <img src="{{ url_for('static', filename='uni.jpg') }}">
-    <h2>List of Clubs:</h2>
+      <title>List of Clubs</title
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     
+
+    <style>
+      h1.header2{
+        font-family:DM Serif text;
+        text-align: center;
+      }
+
+      h1.header1{
+        font-family:Copperplate;
+        font-size:60px;
+        text-align:center;
+      }
+      
+      #main-img{
+        width:100%;
+        height:350px;
+        object-fit:cover;
+        display:block;
+      }
+      .my-container {
+        max-width: 1000px;   
+        margin: 0 auto;     
+        padding: 0 20px;
+      }
+
+    </style>
+   </head>
+  
+  <body>
+    <div class ="my-container">
+    <h1 class="header1"> XYZ UNIVERSITY</h1>
+    <h1 class="header2"> Student Clubs</h1>
+    <img src="{{ url_for('static', filename='uni.jpg') }}" id="main-img" >
+      <br>
+    <p style="font-family:Times New Roman;">Discover a vibrant range of student-run clubs and societies that cater to diverse interests — from technology and entrepreneurship to arts, culture, and sports. Join a community that matches your passion, connect with like-minded peers, and enhance your college experience beyond the classroom.</p>
+    <h2 style="font-family:Copperplate;">List of Clubs:</h2>
+      
+    <button type="button" class="btn btn-outline-primary">Contact Us</button>
+      </div>
   </body>
 </html>
