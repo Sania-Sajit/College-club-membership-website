@@ -1,0 +1,25 @@
+
+
+<div class="col-md-4">
+  
+  <div class="card h-100" style="width: 100%;">
+    <img src="{{ url_for('static', filename=club['logo']) }}" class="card-img-top"
+       style="border: 10px solid rgb(255,255,255); border-radius: 12px;"
+ alt="{{ club['name'] }}">
+
+    
+    <div class="card-body" style="color:rgb(92, 51, 23);">
+      <h5 class="card-title" style="font-family:Times New Roman; font-size:22px; text-transform: uppercase;"><b>{{ club['name'] }}</b></h5>
+      <p class="card-text" >
+        <div style="font-family:Times New Roman; ">
+        <div style="font-size:18px;margin-top:-10px;"><em>{{ club['Description'] }}</em><br></div>
+          <div style="font-size:18px;">
+        <b>Domain:</b> {{ club['domain'] }}<br>
+        <b>Club Head:</b> {{ club['head'] }}
+          </div>
+      </p>
+        </div>
+      <a href="#" class="btn btn-outline-beige btn-sm">Join Now</a>
+    </div>
+  </div>
+</div>
