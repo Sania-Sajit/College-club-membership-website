@@ -3,23 +3,23 @@
 <div class="col-md-4">
   
   <div class="card h-100" style="width: 100%;">
-    <img src="{{ url_for('static', filename=club['logo']) }}" class="card-img-top"
+    <img src="{{ url_for('static', filename=club['img_name']) }}" class="card-img-top"
        style="border: 10px solid rgb(255,255,255); border-radius: 12px;"
- alt="{{ club['name'] }}">
+ alt="{{ club['title'] }}">
 
     
     <div class="card-body" style="color:rgb(92, 51, 23);">
-      <h5 class="card-title" style="font-family:Times New Roman; font-size:22px; text-transform: uppercase;"><b>{{ club['name'] }}</b></h5>
+      <h5 class="card-title" style="font-family:Times New Roman; font-size:22px; text-transform: uppercase;"><b>{{ club['title'] }}</b></h5>
       <p class="card-text" >
         <div style="font-family:Times New Roman; ">
-        <div style="font-size:18px;margin-top:-10px;"><em>{{ club['Description'] }}</em><br></div>
+        <div style="font-size:18px;margin-top:-10px;"><em>{{ club['description'] }}</em><br></div>
           <div style="font-size:18px;">
         <b>Domain:</b> {{ club['domain'] }}<br>
-        <b>Club Head:</b> {{ club['head'] }}
+        <b>Club Head:</b> {{ club['club_head'] }}
           </div>
       </p>
         </div>
-      <a href="mailto:club_rep@xyz.ac.in?subject=Application%20for%20Membership%20to%20{{club['name']}}&body=Name%3A%20%3Cyourname%3E%0D%0A%0D%0AStudent_ID%3A%20%3Center%20student%20id%3E%0D%0A%0D%0A" class="btn btn-outline-beige btn-sm">Join Now</a>
+      <a href="mailto:club_rep@xyz.ac.in?subject=Application%20for%20Membership%20to%20{{club['title']}}&body=Name%3A%20%3Cyourname%3E%0D%0A%0D%0AStudent_ID%3A%20%3Center%20student%20id%3E%0D%0A%0D%0A" class="btn btn-outline-beige btn-sm">Join Now</a>
     </div>
   </div>
 </div>
