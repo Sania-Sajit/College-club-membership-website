@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{club.title}}-Apply to Join</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Adamina&family=Manufacturing+Consent&family=Tilt+Prism&display=swap"
+    rel="stylesheet">
+
+  <style>
+    .my-container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+      .heading {
+        font-size: 19px;
+      }
+      h4{
+        margin-top:14px;
+        font-size:22px;
+        margin-bottom:0px;
+      }
+      #main-img{
+        width:100%;
+        height:350px;
+        object-fit:cover;
+        display:block;
+      }
+    
+  </style>
+</head>
+
+
+
+<body style="background-color: rgb(242, 235, 221); ">
+  {%include 'nav.html'%}
+  <div class="my-container" style="font-family:Times New Roman; color:rgb(92, 51, 23);">
+    <img src="{{ url_for('static', filename='uni.jpg') }}" id="main-img" >
+    <div class="heading">
+      <h4><b>Title:</b></h4>{{club.title}}
+      <h4><b>Why Join:</b></h4>
+      <ul>
+        {% for line in club.why_join.split("\n")%}
+        <li>{{line}}</li>
+        {%endfor%}
+      </ul>
+      <h4><b>Eligibility:</b></h4>{{club.eligibility}}
+      <h4><b>Session Timings:</b></h4>{{club.meet}}
+
+    </div </div>
+
+</body>
+
+</html>
