@@ -1,0 +1,50 @@
+ 
+  <style>
+    .form-box{
+      background-color: #f6f3ee; 
+      border-color: rgb(92, 51, 23); 
+      font-family: 'Times New Roman'; 
+      color: rgb(92, 51, 23);
+      margin-bottom:10px;
+      padding-top:-5px;
+    }
+
+    .label-1{
+      color: rgb(92, 51, 23); 
+      font-weight: bold; 
+      font-size: 18px; 
+      min-width: 100px;
+    }
+  </style>
+  
+<form action="/club/{{club['id']}}/apply" method="Post">
+    <label for="name" class="form-label me-3">Name:</label>
+    <input type="text" class="form-control form-box" id="name" name="name" placeholder="Enter your name">
+
+  
+    <label for="stud-id" class="form-label me-3">Student ID:</label>
+    <input type="text" class="form-control form-box" id="stud-id" name="stud-id" placeholder="Enter your student ID No.">
+
+    <label for="mail" class="form-label me-3">Email ID:</label>
+    <input type="text" name="mail" class="form-control form-box" id="mail" placeholder="Enter your email ID">
+
+   <label for="phone" class="form-label me-3">Phone No.:</label>
+   <input type="text" name = "phone" class="form-control form-box" id="phone" placeholder="Enter your phone number">
+
+
+     <label for="why-join" class="form-label">
+       Why do you want to join this club?
+     </label>
+     <textarea name = "why-join" class="form-control form-box" id="why-join" rows="4" placeholder="Share your motivation or interest..." 
+       style="resize: vertical;"></textarea>
+
+
+
+  <div style="text-align: center; padding-top: 30px; padding-bottom: 30px;">
+    <input type="submit" value="Submit"
+      class="btn"
+      style="background-color: rgb(170, 140, 110); color: white; border: none; font-family: sans-serif;">
+  </div>
+
+
+  </form>
